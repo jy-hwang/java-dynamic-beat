@@ -22,14 +22,14 @@ public class DynamicBeat extends JFrame {
 
     ImageIcon backgroundImage = new ImageIcon(Main.class.getResource("/images/introBackground.jpg"));
     
-    System.out.println(backgroundImage);
     introBackground = backgroundImage.getImage();
 
+    Music introMusic = new Music("introMusic.mp3", true);
+    introMusic.start();
   }
 
   public void paint(Graphics g) {
     screenImage = createImage(Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);
-    System.out.println(screenImage);
     screenGraphic = screenImage.getGraphics();
     screenDraw(screenGraphic);
     g.drawImage(screenImage, 0, 0, null);
